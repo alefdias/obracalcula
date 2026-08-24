@@ -1,19 +1,28 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
+import { CookieConsent } from './components/common/CookieConsent';
 import { HomePage } from './pages/HomePage';
 import { AllCalculatorsPage } from './pages/AllCalculatorsPage';
 import { CalculatorDetailPage } from './pages/CalculatorDetailPage';
 import { MaterialsGuidePage } from './pages/MaterialsGuidePage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
 import { TermsPage } from './pages/TermsPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { useScrollToTop } from './hooks/useScrollToTop';
+import { trackPageView } from './utils/analytics';
 
 const AppContent: React.FC = () => {
   useScrollToTop();
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -38,9 +47,11 @@ const AppContent: React.FC = () => {
           {/* Dynamic Slug Route */}
           <Route path="/:slug" element={<CalculatorDetailPage />} />
 
-          {/* Informational Pages */}
+          {/* Informational & Institutional Pages */}
           <Route path="/materiais" element={<MaterialsGuidePage />} />
           <Route path="/como-funciona" element={<HowItWorksPage />} />
+          <Route path="/sobre" element={<AboutPage />} />
+          <Route path="/contato" element={<ContactPage />} />
           <Route path="/termos" element={<TermsPage />} />
           <Route path="/privacidade" element={<PrivacyPage />} />
 
@@ -49,6 +60,7 @@ const AppContent: React.FC = () => {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };

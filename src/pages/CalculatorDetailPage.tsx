@@ -108,12 +108,15 @@ export const CalculatorDetailPage: React.FC<CalculatorDetailPageProps> = ({ forc
         </p>
       </div>
 
+      {/* Publicidade Discreta no Topo */}
+      <AdPlaceholder slot="top-banner" category={calculator.name} />
+
       {/* Main Calculator Interactive Component */}
       <section aria-label="Formulário de Cálculo">
         {renderCalculatorComponent(calculator.id)}
       </section>
 
-      {/* Affiliate recommendations */}
+      {/* Affiliate recommendations / Onde Comprar com Desconto */}
       <AdPlaceholder slot="affiliate-products" category={calculator.categoryLabel} />
 
       {/* SEO Section (How-To, Pro Tips, FAQs, Internal Links) */}

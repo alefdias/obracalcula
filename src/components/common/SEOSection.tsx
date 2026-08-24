@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BookOpen, Lightbulb, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { CalculatorMeta, getRelatedCalculators } from '../../data/calculatorRegistry';
 import { FAQAccordion } from './FAQAccordion';
+import { AdPlaceholder } from './AdPlaceholder';
 
 interface SEOSectionProps {
   calculator: CalculatorMeta;
@@ -68,6 +69,9 @@ export const SEOSection: React.FC<SEOSectionProps> = ({ calculator }) => {
           </div>
         </section>
       )}
+
+      {/* Publicidade Discreta In-Content */}
+      <AdPlaceholder slot="in-content" category={calculator.name} />
 
       {/* FAQ Accordion */}
       {calculator.faqList && calculator.faqList.length > 0 && (

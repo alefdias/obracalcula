@@ -108,12 +108,22 @@ export const Footer: React.FC = () => {
           {/* Institucional & Legal */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">
-              ObraCalcula
+              Institucional
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link to="/sobre" className="hover:text-accent-400 transition-colors">
+                  Sobre Nós
+                </Link>
+              </li>
+              <li>
                 <Link to="/como-funciona" className="hover:text-accent-400 transition-colors">
                   Como Funciona
+                </Link>
+              </li>
+              <li>
+                <Link to="/contato" className="hover:text-accent-400 transition-colors">
+                  Contato & Suporte
                 </Link>
               </li>
               <li>

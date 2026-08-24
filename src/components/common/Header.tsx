@@ -88,12 +88,21 @@ export const Header: React.FC = () => {
             </Link>
 
             <Link
-              to="/como-funciona"
-              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive('/como-funciona') ? 'bg-white/10 text-white font-semibold' : 'text-slate-200 hover:text-white hover:bg-white/5'
+              to="/sobre"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isActive('/sobre') ? 'bg-white/10 text-white font-semibold' : 'text-slate-200 hover:text-white hover:bg-white/5'
               }`}
             >
-              Como funciona
+              Sobre
+            </Link>
+
+            <Link
+              to="/contato"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isActive('/contato') ? 'bg-white/10 text-white font-semibold' : 'text-slate-200 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              Contato
             </Link>
           </nav>
 
@@ -104,7 +113,7 @@ export const Header: React.FC = () => {
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-accent-500 hover:bg-accent-400 active:bg-accent-600 text-slate-950 font-bold rounded-xl text-sm transition-all shadow-sm hover:shadow hover:scale-[1.02]"
             >
               <LayoutGrid className="w-4 h-4" />
-              <span>Todas as calculadoras</span>
+              <span>Calculadoras</span>
             </Link>
           </div>
 
@@ -145,34 +154,6 @@ export const Header: React.FC = () => {
               Todas as Calculadoras
             </Link>
             <Link
-              to="/calculadoras?cat=construcao"
-              onClick={closeMenu}
-              className="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5"
-            >
-              Construção (Tijolos, Concreto, Cimento)
-            </Link>
-            <Link
-              to="/calculadoras?cat=pisos"
-              onClick={closeMenu}
-              className="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5"
-            >
-              Pisos e Revestimentos (Piso, Rejunte, Argamassa)
-            </Link>
-            <Link
-              to="/calculadoras?cat=pintura"
-              onClick={closeMenu}
-              className="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5"
-            >
-              Pintura (Tinta, Massa Corrida)
-            </Link>
-            <Link
-              to="/calculadoras?cat=reforma"
-              onClick={closeMenu}
-              className="block px-4 py-2.5 rounded-xl text-base font-medium text-slate-200 hover:bg-white/5"
-            >
-              Reforma Residencial (Rodapé, Parede)
-            </Link>
-            <Link
               to="/materiais"
               onClick={closeMenu}
               className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
@@ -189,6 +170,24 @@ export const Header: React.FC = () => {
               }`}
             >
               Como Funciona
+            </Link>
+            <Link
+              to="/sobre"
+              onClick={closeMenu}
+              className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+                isActive('/sobre') ? 'bg-white/10 text-white font-bold' : 'text-slate-200 hover:bg-white/5'
+              }`}
+            >
+              Sobre Nós
+            </Link>
+            <Link
+              to="/contato"
+              onClick={closeMenu}
+              className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+                isActive('/contato') ? 'bg-white/10 text-white font-bold' : 'text-slate-200 hover:bg-white/5'
+              }`}
+            >
+              Contato & Suporte
             </Link>
           </div>
 

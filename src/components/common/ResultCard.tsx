@@ -10,6 +10,7 @@ import {
   PackageCheck
 } from 'lucide-react';
 import { shareViaWhatsApp, copyToClipboard, shareNative, triggerPrint, ShareDataPayload } from '../../utils/shareHelper';
+import { trackCopyResult, trackShareWhatsApp } from '../../utils/analytics';
 
 export interface ResultMetric {
   label: string;
@@ -65,6 +66,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
   };
 
   const handleCopy = async () => {
+    trackCopyResult(calculatorName);
     const success = await copyToClipboard(getSharePayload());
     if (success) {
       setCopied(true);
@@ -73,10 +75,12 @@ export const ResultCard: React.FC<ResultCardProps> = ({
   };
 
   const handleWhatsApp = () => {
+    trackShareWhatsApp(calculatorName);
     shareViaWhatsApp(getSharePayload());
   };
 
   const handleNativeShare = async () => {
+    trackShareWhatsApp(calculatorName);
     const shared = await shareNative(getSharePayload());
     if (!shared) {
       // fallback to copy
