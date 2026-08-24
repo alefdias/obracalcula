@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+  }
+
+  /* Custom input number styles to remove default arrows where needed while keeping smooth typing */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-base;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent-500 hover:bg-accent-600 active:bg-accent-700 text-slate-900 font-bold rounded-xl shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 text-base;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 bg-white hover:bg-slate-100 active:bg-slate-200 text-slate-700 font-semibold border border-slate-200 rounded-xl shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 text-base;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3.5 bg-white border-2 border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-base font-medium focus:border-brand-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-100 transition-all duration-150;
+  }
+
+  .label-title {
+    @apply block text-sm font-semibold text-slate-700 mb-1.5;
+  }
+}
+
+/* Print styles for clean quotes / calculation summaries */
+@media print {
+  header, footer, .no-print, .ad-banner {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .shadow-card, .shadow-result, .shadow-lg {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
