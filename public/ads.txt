@@ -1,4 +1,2 @@
 # ads.txt do ObraCalcula
-# Substitua pub-XXXXXXXXXXXXXXXX pelo seu ID de editor do Google AdSense
-# Exemplo: google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-6262635109806028, DIRECT, f08c47fec0942fa0

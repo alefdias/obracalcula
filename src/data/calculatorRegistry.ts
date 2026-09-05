@@ -40,24 +40,39 @@ export const CALCULATORS: CalculatorMeta[] = [
     detailedDescription: 'Descubra a quantidade exata de pisos cerâmicos ou porcelanatos, quantidade de caixas a comprar e a metragem quadrada total já com a folga necessária para cortes.',
     popular: true,
     estimatedTimeSec: 20,
-    searchKeywords: ['piso', 'porcelanato', 'azulejo', 'revestimento', 'cerâmica', 'sala', 'quarto', 'banheiro', 'caixa de piso', 'metros quadrados de piso', 'quanto material de piso', 'quanto piso comprar', 'quanto piso preciso'],
-    metaTitle: 'Quanto Material de Piso Comprar: Calculadora de Piso e Porcelanato | ObraCalcula',
-    metaDescription: 'Descubra quanto material de piso comprar para sua obra ou reforma. Calcule metros quadrados, quantidade de peças e caixas com margem de perda recomendada.',
+    searchKeywords: ['piso', 'porcelanato', 'azulejo', 'revestimento', 'cerâmica', 'sala', 'quarto', 'banheiro', 'caixa de piso', 'metros quadrados de piso', 'quanto material de piso', 'quanto piso comprar', 'quanto piso preciso', 'calculadora de piso', 'calculadora de piso online', 'calcular piso m2', 'calculadora de cerâmica', 'calculadora de porcelanato', 'quantas caixas de piso preciso', 'como calcular piso'],
+    metaTitle: 'Calculadora de Piso Online Grátis — Quantas Caixas Comprar | ObraCalcula',
+    metaDescription: 'Calculadora de piso online grátis. Descubra quantas caixas de porcelanato ou cerâmica comprar para sua obra: calcule m², peças e margem de perda em segundos.',
     howToSteps: [
-      'Meça o comprimento e a largura do cômodo em metros (ou informe a área total m²).',
-      'Informe as dimensões da peça de piso ou porcelanato (ex: 60x60 cm, 80x80 cm).',
-      'Selecione a margem de desperdício (10% para assentamento reto tradicional ou 15% a 20% para diagonal/cortes complexos).',
-      'Se souber a quantidade de m² por caixa que o fabricante vende, informe para obter o total de caixas fechadas.'
+      'Meça o comprimento e a largura do cômodo em metros (ou informe a área total m²) — use uma trena ou o próprio aplicativo de medição do celular.',
+      'Informe as dimensões da peça de piso ou porcelanato (ex: 60x60 cm, 80x80 cm) — geralmente está impressa na caixa.',
+      'Selecione a margem de desperdício: 10% para assentamento reto simples, 15% para diagonal ou espinha de peixe, e 20% para peças grandes acima de 80x80 cm.',
+      'Se souber a metragem por caixa (m²/cx), informe para obter o total de caixas fechadas a comprar.',
+      'Anote o resultado e leve para o depósito: a calculadora já arredonda para caixas inteiras.'
     ],
     tips: [
-      'Sempre guarde de 1 a 2 caixas extras do mesmo lote para futuras manutenções ou reparos de encanamento.',
-      'Em assentamentos diagonais ou espinha de peixe, o desperdício é maior devido aos recortes nos cantos.',
-      'Verifique se todas as caixas compradas pertencem à mesma tonalidade e calibre de fábrica.'
+      'Sempre guarde de 1 a 2 caixas extras do mesmo lote para futuras manutenções ou reparos de encanamento — lotes diferentes podem ter diferença de tonalidade.',
+      'Em assentamentos diagonais (45°) ou espinha de peixe, o desperdício sobe para 15% a 20% devido aos recortes nos cantos — planeje com folga.',
+      'Verifique se todas as caixas compradas têm o mesmo código de tonalidade e calibre impresso — peças de lotes distintos podem ter variação visível de cor.',
+      'Peças grandes (80x80 cm, 90x90 cm, 120x60 cm) exigem base perfeitamente nivelada e dupla colagem de argamassa, aumentando o custo de assentamento.',
+      'Compare o preço por m² e não por caixa: uma caixa maior pode ser mais barata mesmo que o preço unitário pareça maior.'
     ],
     faqList: [
       {
-        question: 'Como saber quanto material de piso comprar?',
-        answer: 'Multiplique o comprimento pela largura do ambiente para obter a metragem quadrada (m²) e adicione 10% de margem para cortes e quebras. Divida pela metragem da caixa para saber quantas caixas comprar.'
+        question: 'Como usar a calculadora de piso?',
+        answer: 'Informe as dimensões do ambiente (comprimento e largura em metros), o tamanho da peça (ex: 60x60 cm) e a margem de desperdício desejada (10% para assentamento reto). A calculadora retorna automaticamente os m² necessários, o número de peças e a quantidade de caixas a comprar.'
+      },
+      {
+        question: 'Como calcular piso por m²?',
+        answer: 'Multiplique o comprimento pela largura do cômodo para obter os m² brutos. Multiplique o resultado por 1,10 (para 10% de perda) ou 1,15 (15%). Divida pelo rendimento da caixa (m²/cx) para saber o número de caixas. Exemplo: sala de 5m x 4m = 20m² x 1,10 = 22m² ÷ 2,16 m²/cx = 10,2 → compre 11 caixas.'
+      },
+      {
+        question: 'Quanto piso preciso para um quarto de 10m²?',
+        answer: 'Para 10m² com 10% de perda, você precisa de 11m² de piso. Se cada caixa render 2,16m² (porcelanato 60x60), serão necessárias 5 caixas (10,18 m² → arredonda para 5 caixas cheias).'
+      },
+      {
+        question: 'Quantas caixas de piso para uma sala de 20 m²?',
+        answer: '20m² com 10% de perda = 22m². Dividindo por 2,16m²/cx (porcelanato 60x60), o resultado é 10,2 caixas → compre 11 caixas. Para 2,00m²/cx, seriam 11 caixas também.'
       },
       {
         question: 'Qual porcentagem de perda devo considerar para piso?',
@@ -65,15 +80,11 @@ export const CALCULATORS: CalculatorMeta[] = [
       },
       {
         question: 'Quantos pisos vem em uma caixa?',
-        answer: 'Varia conforme o fabricante e tamanho da peça. Geralmente uma caixa cobre entre 1,44 m² e 2,50 m². Verifique a embalagem ou especificação do produto antes da compra.'
-      },
-      {
-        question: 'Como calcular piso para uma sala de 20 m²?',
-        answer: 'Multiplica-se a área (20 m²) por 1,10 (10% de perda), totalizando 22 m². Se cada caixa tiver 2,00 m², você precisará de 11 caixas.'
+        answer: 'Varia conforme o fabricante e tamanho da peça. Porcelanato 60x60cm: em geral 2,16m²/cx (6 peças). Cerâmica 45x45cm: em geral 1,80m²/cx (8 peças). Verifique sempre a embalagem.'
       },
       {
         question: 'Devo comprar piso extra além do cálculo?',
-        answer: 'Sim! Além dos 10% de perda operacional de corte, ter 1 caixa guardada na despensa garante reposição com o mesmo tom e lote em caso de trincas ou reformas futuras.'
+        answer: 'Sim! Além dos 10% de perda operacional, tenha 1 caixa guardada na despensa para reposição com o mesmo tom e lote em caso de trincas ou reformas futuras. Lotes diferentes podem ter diferença de tonalidade.'
       }
     ]
   },
@@ -89,36 +100,47 @@ export const CALCULATORS: CalculatorMeta[] = [
     detailedDescription: 'Calcule a quantidade exata de tijolos cerâmicos (6 furos, 8 furos, 9 furos), blocos de concreto ou tijolos maciços, com desconto automático de vãos de portas e janelas.',
     popular: true,
     estimatedTimeSec: 30,
-    searchKeywords: ['tijolo', 'bloco', 'bloco de concreto', 'tijolo baiano', 'alvenaria', 'levantar parede', 'parede', 'muro', 'construir parede', 'quanto de tijolo', 'quanto material de alvenaria', 'quantos tijolos comprar'],
-    metaTitle: 'Quanto de Tijolo e Bloco Comprar: Calculadora de Parede | ObraCalcula',
-    metaDescription: 'Descubra quanto material de alvenaria comprar: quantidade de tijolos baianos, maciços ou blocos de concreto por m² com desconto de portas e janelas.',
+    searchKeywords: ['tijolo', 'bloco', 'bloco de concreto', 'tijolo baiano', 'alvenaria', 'levantar parede', 'parede', 'muro', 'construir parede', 'quanto de tijolo', 'quanto material de alvenaria', 'quantos tijolos comprar', 'quantos tijolos preciso', 'quantos tijolos por m2', 'quantos tijolos para uma parede', 'calculadora de tijolos', 'calcular tijolos', 'tijolos por metro quadrado', 'quantos tijolos para construir uma casa'],
+    metaTitle: 'Quantos Tijolos Preciso? Calculadora de Tijolos por m² | ObraCalcula',
+    metaDescription: 'Descubra quantos tijolos você precisa: calcule tijolos baianos (8 furos), maciços ou blocos de concreto por m² de parede com desconto automático de portas e janelas.',
     howToSteps: [
-      'Adicione as medidas de cada parede (comprimento x altura).',
-      'Desconte as áreas de portas e janelas existentes nas paredes.',
-      'Escolha o tipo de tijolo ou bloco (ex: Baiano 8 furos, Bloco de Concreto 14x19x39, Maciço, etc.).',
-      'Defina a margem de perda (geralmente 10% a quebra no transporte e corte).'
+      'Adicione as medidas de cada parede que será construída: informe o comprimento (metros) e a altura (metros) de cada trecho.',
+      'Desconte os vãos de portas (altura média 2,10m × largura) e janelas (altura × largura) que existem nessas paredes.',
+      'Escolha o tipo de tijolo ou bloco: Baiano 8 furos (25 un/m²), Bloco de Concreto 14x19x39 (12,5 un/m²), Maciço (60 un/m²), entre outros.',
+      'Defina a margem de perda — recomendamos 10% para quebras no transporte, descarga e cortes.',
+      'Anote o total em unidades e milheiros para facilitar a compra no depósito.'
     ],
     tips: [
-      'Tijolos furados costumam sofrer quebra no descarregamento e transporte. Uma folga de 10% é essencial.',
-      'O bloco de concreto 14x19x39 rende cerca de 12,5 peças por metro quadrado com junta de 1 cm.',
-      'Não se esqueça de prever a argamassa de assentamento proporcional ao número de tijolos.'
+      'Tijolos furados (baiano) costumam sofrer quebra de 5% a 10% no descarregamento e transporte — uma folga de 10% no pedido é essencial para não faltar.',
+      'O bloco de concreto 14x19x39 rende 12,5 peças por metro quadrado com junta de 1 cm — ideal para paredes estruturais e muros.',
+      'Não se esqueça de calcular a argamassa de assentamento proporcional: para 1.000 tijolos baianos são necessários cerca de 2 a 3 sacos de cimento e 150 kg de areia.',
+      'Tijolos são vendidos em milheiros (1.000 unidades). Compre sempre em quantidade de milheiro fechado para economizar no frete.',
+      'Para muros de divisa, prefira tijolo maciço ou bloco de concreto pela maior resistência à chuva e umidade do solo.'
     ],
     faqList: [
       {
-        question: 'Como saber quanto tijolo comprar para uma parede?',
-        answer: 'Multiplique a área da parede em m² pelo consumo médio do tijolo escolhido (ex: 25 a 27 tijolos baianos de 8 furos por m²) e adicione 10% de perda por quebra.'
+        question: 'Quantos tijolos preciso para uma parede de 10 m²?',
+        answer: 'Para tijolo baiano 8 furos (consumo de 25 un/m²): 10 m² × 25 = 250 tijolos + 10% de perda = 275 tijolos. Para bloco de concreto 14x19x39 (12,5 un/m²): 10 m² × 12,5 = 125 + 10% = 138 blocos.'
       },
       {
-        question: 'Quantos tijolos de 8 furos gasta por metro quadrado?',
-        answer: 'O tijolo baiano 8 furos (9x19x19 cm) consome em média 25 a 27 tijolos por m² de parede (com junta de argamassa de 1,5 cm).'
+        question: 'Quantos tijolos de 8 furos vão por metro quadrado?',
+        answer: 'O tijolo baiano 8 furos (9x19x19 cm) consome em média 25 a 27 tijolos por m² de parede com junta de argamassa de 1,5 cm. Já o tijolo de 6 furos (10x20x20 cm) consome cerca de 20 a 22 unidades por m².'
+      },
+      {
+        question: 'Quantos tijolos preciso para construir uma casa de 60m²?',
+        answer: 'Uma casa de 60m² tem em média 80 a 100m² de área de paredes (considerando pé-direito de 2,80m e descontando vãos). Com tijolo baiano 8 furos: 90m² × 25 = 2.250 tijolos + 10% = 2.475 tijolos (aproximadamente 2,5 milheiros).'
       },
       {
         question: 'Quantos blocos de concreto 14x19x39 vão por metro quadrado?',
-        answer: 'São necessários aproximadamente 12,5 blocos de concreto por metro quadrado de parede.'
+        answer: 'São necessários aproximadamente 12,5 blocos de concreto 14x19x39 cm por metro quadrado de parede. Com 10% de perda: 13,75 blocos/m².'
       },
       {
-        question: 'Como descontar portas e janelas no cálculo de parede?',
-        answer: 'Calcule a área do vão (largura x altura) e subtraia da área bruta da parede. O ObraCalcula faz essa dedução automaticamente no formulário de múltiplas paredes.'
+        question: 'Qual a diferença entre tijolo baiano e bloco de concreto?',
+        answer: 'O tijolo baiano (cerâmico furado) é mais leve e mais barato, ideal para alvenaria de vedação (paredes internas). O bloco de concreto é mais resistente e mais pesado, sendo usado em muros, paredes estruturais e fundações.'
+      },
+      {
+        question: 'Como descontar portas e janelas no cálculo de tijolos?',
+        answer: 'Calcule a área do vão (largura × altura) e subtraia da área bruta da parede. Exemplo: parede de 3m × 2,8m = 8,4m² com uma porta de 0,90m × 2,10m = 1,89m², então a área líquida é 6,51m². O ObraCalcula faz essa dedução automaticamente.'
       }
     ]
   },
@@ -134,32 +156,47 @@ export const CALCULATORS: CalculatorMeta[] = [
     detailedDescription: 'Estime a quantidade ideal de tinta látex, acrílica ou esmalte com base na metragem das paredes, inclusão do teto, demãos e desconto de esquadrias.',
     popular: true,
     estimatedTimeSec: 25,
-    searchKeywords: ['tinta', 'pintura', 'pintar casa', 'galão de tinta', 'lata de tinta', 'demãos', 'pintar quarto', 'teto', 'parede', 'quanto de tinta', 'quanto material de pintura comprar', 'quantas latas de tinta'],
-    metaTitle: 'Quanto de Tinta Comprar: Calculadora de Litros, Latas e Galões | ObraCalcula',
-    metaDescription: 'Descubra quanto material de pintura comprar: calcule litros, latas de 18L e galões de 3,6L de tinta para paredes e tetos sem sobrar nem faltar.',
+    searchKeywords: ['tinta', 'pintura', 'pintar casa', 'galão de tinta', 'lata de tinta', 'demãos', 'pintar quarto', 'teto', 'parede', 'quanto de tinta', 'quanto material de pintura comprar', 'quantas latas de tinta', 'calculadora de tinta', 'calculadora de tinta parede', 'calcular tinta para parede', 'quanto tinta preciso', 'quanto tinta por m2', 'litros de tinta por m2', 'calculadora de pintura', 'tinta para quarto', 'tinta para sala'],
+    metaTitle: 'Calculadora de Tinta Parede — Quantos Litros, Latas e Galões Comprar | ObraCalcula',
+    metaDescription: 'Calculadora de tinta para parede grátis. Descubra quantos litros, latas de 18L ou galões de 3,6L de tinta comprar para paredes e teto sem sobrar nem faltar.',
     howToSteps: [
-      'Informe o comprimento, largura e altura do ambiente (ou a área das paredes).',
-      'Informe a quantidade e tamanho de portas e janelas para descontar a área.',
-      'Escolha se deseja incluir a pintura do teto.',
-      'Defina o número de demãos (normalmente 2 a 3 para boa cobertura).'
+      'Informe o comprimento, a largura e a altura do ambiente em metros para calcular a área total das paredes automaticamente.',
+      'Informe a quantidade e dimensões de portas (normalmente 0,90m × 2,10m) e janelas para descontar a área que não será pintada.',
+      'Escolha se deseja incluir o teto na pintura — o teto tem a mesma área do piso do ambiente.',
+      'Selecione o número de demãos: 2 para repintura, 3 para paredes novas ou mudança drástica de cor.',
+      'Informe o rendimento da tinta (m²/litro) — verifique na lata. Tinta standard: 10 a 11 m²/L; premium: 12 a 14 m²/L.'
     ],
     tips: [
-      'Paredes novas sem pintura anterior ou com cores escuras costumam exigir selador e 3 demãos de tinta.',
-      'Combine latas de 18L e galões de 3,6L para evitar sobras excessivas de tinta.',
-      'Tinta standard rende cerca de 10 m²/litro por demão; tintas premium de alta cobertura podem render até 12-14 m²/litro.'
+      'Paredes novas sem pintura anterior ou com cores escuras (como vermelho e azul escuro) exigem selador antes + 3 demãos de tinta para boa cobertura.',
+      'Combine latas de 18L e galões de 3,6L para não desperdiçar: use a lata grande para a maior parte e um galão para os retoques finais.',
+      'Tinta standard rende cerca de 10 m²/litro por demão; tintas premium de alta cobertura rendem 12 a 14 m²/litro — pode compensar mesmo sendo mais cara.',
+      'Para textura lisa (massa corrida), aplique massa antes da tinta — isso reduz o consumo de tinta e melhora o acabamento.',
+      'Nunca misture tintas de marcas diferentes na mesma parede — podem ter composição diferente e criar manchas.'
     ],
     faqList: [
       {
+        question: 'Como calcular tinta para paredes de um quarto?',
+        answer: 'Some as 4 paredes do quarto: 2 × (comprimento + largura) × altura. Exemplo: quarto 4m × 3m, pé-direito 2,80m → 2 × (4+3) × 2,80 = 39,2m². Desconte portas e janelas (~5m²) = 34,2m². Com 2 demãos e rendimento de 10m²/L: 34,2 × 2 ÷ 10 = 6,84 litros → compre 2 galões de 3,6L.'
+      },
+      {
+        question: 'Quanto tinta por m² de parede?',
+        answer: 'Com tinta standard (rendimento 10m²/L) e 2 demãos, o consumo é de 0,20 litros por m². Com 3 demãos, 0,30 litros por m². Exemplo: 50m² de parede × 0,20 L/m² = 10 litros de tinta.'
+      },
+      {
         question: 'Quantos metros quadrados uma lata de 18 litros pinta?',
-        answer: 'Uma lata de 18 litros com rendimento médio de 10 m²/L rende cerca de 180 m² com 1 demão, ou cerca de 90 m² com 2 demãos completas.'
+        answer: 'Com rendimento de 10 m²/L e 2 demãos, uma lata de 18 litros pinta aproximadamente 90 m² de parede. Com 3 demãos, rende em torno de 60 m².'
       },
       {
         question: 'Quantas demãos de tinta são necessárias?',
-        answer: 'Para repintura com a mesma cor, 2 demãos costumam ser suficientes. Para paredes novas ou troca de cor forte para clara, recomenda-se 3 demãos.'
+        answer: 'Para repintura com a mesma cor ou cor similar, 2 demãos costumam ser suficientes. Para paredes novas, reparo de manchas ou troca de cor escura para clara, recomenda-se aplicar selador + 3 demãos de tinta.'
       },
       {
-        question: 'O que rende mais: 1 lata de 18L ou 5 galões de 3,6L?',
-        answer: 'O volume total é o mesmo (18L), mas a lata de 18 litros costuma ser entre 20% e 35% mais barata por litro do que comprar galões fracionados.'
+        question: 'Qual a diferença entre galão (3,6L) e lata (18L) de tinta?',
+        answer: 'O volume total de 5 galões é igual a 1 lata (18L), mas a lata de 18 litros costuma ser 20% a 35% mais barata por litro. Compre a lata se for pintar uma área grande; prefira galões para retoques ou áreas pequenas.'
+      },
+      {
+        question: 'Quanto tinta preciso para pintar uma casa inteira?',
+        answer: 'Uma casa de 60m² tem em média 150 a 200m² de paredes internas. Com 2 demãos e rendimento de 10m²/L: 200m² × 2 ÷ 10 = 40 litros → 2 latas de 18L + 1 galão de 3,6L (41,6L no total).'
       }
     ]
   },
@@ -219,28 +256,46 @@ export const CALCULATORS: CalculatorMeta[] = [
     detailedDescription: 'Calcule quantos sacos de cimento de 50kg você precisará para diferentes serviços da obra: reboco de parede, emboço, contrapiso, assentamento de tijolos ou concreto.',
     popular: true,
     estimatedTimeSec: 25,
-    searchKeywords: ['cimento', 'saco de cimento', 'sacos de cimento 50kg', 'reboco', 'emboço', 'contrapiso', 'assentamento', 'quanto de cimento', 'quantos sacos de cimento comprar'],
-    metaTitle: 'Quanto de Cimento Comprar (Sacos 50kg): Calculadora | ObraCalcula',
-    metaDescription: 'Descubra quanto cimento comprar: calcule a quantidade de sacos de 50kg para contrapiso, reboco, assentamento de tijolos e concreto sem desperdício.',
+    searchKeywords: ['cimento', 'saco de cimento', 'sacos de cimento 50kg', 'reboco', 'emboço', 'contrapiso', 'assentamento', 'quanto de cimento', 'quantos sacos de cimento comprar', 'quanto cimento por m2', 'quantos sacos de cimento por m2', 'calculadora de cimento', 'cimento por metro quadrado', 'sacos de cimento para contrapiso', 'quanto cimento para reboco', 'quanto cimento para laje', 'cimento para 100m2'],
+    metaTitle: 'Quanto Cimento por m²? Calculadora de Sacos 50kg | ObraCalcula',
+    metaDescription: 'Descubra quanto cimento por m² você precisa: calcule sacos de 50kg para contrapiso, reboco, assentamento e concreto. Tabela completa de consumo por serviço.',
     howToSteps: [
-      'Selecione o tipo de serviço que irá realizar (Contrapiso, Reboco/Emboço, Assentamento de Tijolos ou Concreto).',
-      'Informe a área (m²) ou volume a ser executado.',
-      'Defina a espessura média da camada (ex: 2 a 3 cm para contrapiso, 1,5 a 2 cm para reboco).',
-      'Consulte a quantidade recomendada de sacos de cimento e areia.'
+      'Selecione o tipo de serviço: Contrapiso, Reboco/Emboço, Assentamento de Tijolos ou Concreto estrutural.',
+      'Informe a área em m² (para contrapiso e reboco) ou o volume em m³ (para concreto).',
+      'Defina a espessura da camada: 3 cm para contrapiso, 1,5 cm para reboco, 2 cm para emboço.',
+      'A calculadora exibe automaticamente os sacos de cimento (50kg), a quantidade de areia e a proporção do traço recomendado.'
     ],
     tips: [
-      'Armazene os sacos de cimento em local seco e coberto, sobre estrados de madeira distantes do piso e paredes.',
-      'Utilize sacos com prazo de validade recente (ideal menos de 30 dias de fabricação).',
-      'O excesso de cimento na massa de reboco causa trincas por retração; respeite as proporções do traço.'
+      'Armazene os sacos de cimento em local seco e coberto, sobre estrados de madeira a pelo menos 30 cm do piso — umidade endurece o saco e inutiliza o produto.',
+      'Use sacos com data de fabricação recente (menos de 3 meses) — cimento envelhece e perde resistência mesmo dentro do saco fechado.',
+      'O excesso de cimento na massa de reboco causa trincas por retração; respeite sempre as proporções do traço — mais cimento não é melhor.',
+      'Para contrapiso de garagem ou área externa, use traço mais rico (1:3) para maior resistência ao tráfego de veículos.',
+      'Compre cimento CP II ou CP III para obras gerais; use CP V-ARI (alta resistência inicial) quando precisar desformar rápido.'
     ],
     faqList: [
       {
-        question: 'Quantos sacos de cimento para 100 m² de reboco?',
-        answer: 'Para um reboco de 1,5 cm de espessura no traço 1:2:8 (cimento, cal e areia), gastam-se cerca de 8 a 10 sacos de cimento de 50kg para 100 m².'
+        question: 'Quanto cimento por m² de contrapiso?',
+        answer: 'Para contrapiso de 3 cm de espessura no traço 1:4 (cimento e areia): 1 saco de 50kg cobre aproximadamente 4 a 5 m². Portanto: 100m² de contrapiso = 20 a 25 sacos de cimento de 50kg.'
       },
       {
-        question: 'Quantos sacos de cimento gasta em um contrapiso de 50 m²?',
-        answer: 'Com espessura média de 3 cm no traço 1:4 (cimento e areia), gasta-se em média de 10 a 12 sacos de cimento de 50kg.'
+        question: 'Quanto cimento por m² de reboco?',
+        answer: 'Para reboco de 1,5 cm no traço 1:2:8 (cimento, cal, areia): 1 saco de 50kg cobre cerca de 10 a 12 m². Para 100m² de reboco: 8 a 10 sacos de cimento de 50kg.'
+      },
+      {
+        question: 'Quantos sacos de cimento para assentar 1.000 tijolos?',
+        answer: 'Para assentamento de tijolos baianos com argamassa traço 1:2:8, gasta-se aproximadamente 1 saco de cimento de 50kg para cada 150 a 200 tijolos. Para 1.000 tijolos: 5 a 7 sacos de cimento.'
+      },
+      {
+        question: 'Quantos sacos de cimento para 100 m² de reboco?',
+        answer: 'Para reboco de 1,5 cm de espessura no traço 1:2:8 (cimento, cal e areia), gastam-se cerca de 8 a 10 sacos de cimento de 50kg para 100 m².'
+      },
+      {
+        question: 'Quantos sacos de cimento para um contrapiso de 50 m²?',
+        answer: 'Com espessura média de 3 cm no traço 1:4 (cimento e areia), gasta-se em média de 10 a 12 sacos de cimento de 50kg para 50m².'
+      },
+      {
+        question: 'Qual a diferença entre cimento CP II, CP III e CP V?',
+        answer: 'CP II (Composto): uso geral em obras comuns. CP III (Alto-forno): mais resistente a sulfatos, ideal para fundações e obras em contato com o solo. CP V-ARI (Alta Resistência Inicial): endurece em 24 a 48h, usado quando se precisa desformar rápido ou em concreto aparente.'
       }
     ]
   },

@@ -40,12 +40,186 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-    
-    <!-- Google AdSense Script (Substitua ca-pub-XXXXXXXXXXXXXXXX pelo seu ID de editor após aprovação) -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0XXEV7H9JE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0XXEV7H9JE', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+    </script>
+
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6262635109806028" crossorigin="anonymous"></script>
   </head>
   <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
-    <div id="root" class="flex-1 flex flex-col"></div>
+    <div id="root" class="flex-1 flex flex-col">
+      <!-- Conteúdo Semântico Estático Inicial para Crawlers e Rastreadores do Google AdSense (substituído automaticamente pelo React no carregamento) -->
+      <header style="padding: 1.5rem 1rem; background-color: #041d38; color: #ffffff; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <a href="/" style="font-size: 1.5rem; font-weight: 900; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            Obra<span style="color: #f59e0b;">Calcula</span>
+          </a>
+          <nav style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem;">
+            <a href="/calculadoras" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Calculadoras</a>
+            <a href="/materiais" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Tabela de Rendimentos</a>
+            <a href="/como-funciona" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Como Funciona</a>
+            <a href="/sobre" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Sobre Nós</a>
+            <a href="/contato" style="color: #cbd5e1; text-decoration: none; font-weight: 600;">Contato</a>
+          </nav>
+        </div>
+      </header>
+
+      <main style="max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; line-height: 1.7; color: #334155;">
+        <section style="margin-bottom: 3rem; text-align: center;">
+          <h1 style="font-size: 2.25rem; font-weight: 900; color: #0f172a; line-height: 1.2; margin-bottom: 1rem;">
+            Quanto Material — Calcule a Quantidade Exata de Materiais para sua Obra
+          </h1>
+          <p style="font-size: 1.15rem; color: #475569; max-width: 850px; margin: 0 auto;">
+            O <strong>ObraCalcula</strong> é uma plataforma brasileira 100% gratuita desenvolvida para ajudar proprietários, pedreiros, mestres de obras, engenheiros e arquitetos a orçar e calcular a quantidade exata de materiais de construção para reformas e construções residenciais, evitando desperdício de dinheiro e sobras desnecessárias.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 3rem;">
+          <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">
+            Nossas Calculadoras Gratuitas de Construção Civil
+          </h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-piso" style="color: inherit; text-decoration: none;">Calculadora de Piso e Porcelanato</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Calcule a metragem quadrada total de piso cerâmico ou porcelanato, número de caixas a comprar e margem de perda recomendada de 5% a 15% conforme a paginação (reta ou diagonal).
+              </p>
+              <a href="/calculadora-de-piso" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Piso &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-tijolos" style="color: inherit; text-decoration: none;">Calculadora de Tijolos e Blocos</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Descubra a quantidade exata de tijolos baianos de 6 ou 8 furos ou blocos de concreto por metro quadrado de parede, já deduzindo vãos de portas e janelas.
+              </p>
+              <a href="/calculadora-de-tijolos" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Tijolos &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-tinta" style="color: inherit; text-decoration: none;">Calculadora de Tinta para Paredes</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Saiba quantos litros, galões de 3,6L ou latas de 18L de tinta acrílica ou látex comprar para pintura interna ou externa de acordo com o número de demãos.
+              </p>
+              <a href="/calculadora-de-tinta" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Tinta &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-concreto" style="color: inherit; text-decoration: none;">Calculadora de Concreto e Traço</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Calcule o volume em metros cúbicos (m³) de concreto para lajes, vigas, pilares e sapatas, com detalhamento de sacos de cimento, latas de areia e brita.
+              </p>
+              <a href="/calculadora-de-concreto" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Concreto &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-cimento" style="color: inherit; text-decoration: none;">Calculadora de Cimento</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Estime com precisão a quantidade de sacos de cimento de 50kg necessários para contrapiso, reboco, assentamento de alvenaria e fundações residenciais.
+              </p>
+              <a href="/calculadora-de-cimento" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Cimento &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-argamassa" style="color: inherit; text-decoration: none;">Calculadora de Argamassa</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Saiba a quantidade de sacos de 20kg de argamassa colante (AC1, AC2 ou AC3) para assentamento de pisos, revestimentos e porcelanatos.
+              </p>
+              <a href="/calculadora-de-argamassa" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Argamassa &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-telhas" style="color: inherit; text-decoration: none;">Calculadora de Telhas e Coberturas</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Calcule a quantidade de telhas cerâmicas (colonial, portuguesa, romana) ou de fibrocimento por área de cobertura considerando inclinação e beirais.
+              </p>
+              <a href="/calculadora-de-telhas" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Telhas &rarr;</a>
+            </article>
+
+            <article style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; padding: 1.5rem;">
+              <h3 style="font-size: 1.2rem; font-weight: 700; color: #082949; margin-bottom: 0.5rem;">
+                <a href="/calculadora-de-rejunte" style="color: inherit; text-decoration: none;">Calculadora de Rejunte</a>
+              </h3>
+              <p style="font-size: 0.95rem; color: #64748b;">
+                Cálculo em quilos (kg) de rejunte cimentício ou epóxi com base no tamanho das peças cerâmicas e na largura da junta de assentamento.
+              </p>
+              <a href="/calculadora-de-rejunte" style="display: inline-block; margin-top: 0.75rem; color: #0284c7; font-weight: bold; text-decoration: none;">Calcular Rejunte &rarr;</a>
+            </article>
+          </div>
+        </section>
+
+        <section style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1.25rem; padding: 2rem; margin-bottom: 3rem;">
+          <h2 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem;">
+            Metodologia Confiável e Normas Técnicas
+          </h2>
+          <p style="margin-bottom: 1rem;">
+            No Brasil, estima-se que reformas e construções desperdiçam de 20% a 30% dos insumos por falta de planejamento na hora da compra. Todas as calculadoras do ObraCalcula utilizam coeficientes baseados nas normas técnicas da Associação Brasileira de Normas Técnicas (<strong>ABNT</strong>) e nos índices de composição de preços do <strong>SINAPI</strong> (Caixa Econômica Federal).
+          </p>
+          <p>
+            Com isso, você tem a segurança de comprar os materiais na medida certa, sem risco de faltar insumo no meio da obra e sem estocar sobras que se deterioram com o tempo.
+          </p>
+        </section>
+      </main>
+
+      <footer style="background-color: #041d38; color: #cbd5e1; padding: 3rem 1.5rem 2rem; margin-top: auto;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          <div>
+            <h4 style="color: #ffffff; font-weight: 800; margin-bottom: 0.75rem;">ObraCalcula</h4>
+            <p style="font-size: 0.85rem; line-height: 1.6; color: #94a3b8;">
+              A plataforma definitiva de cálculo de materiais para sua construção ou reforma residencial.
+            </p>
+          </div>
+          <div>
+            <h4 style="color: #ffffff; font-weight: 800; margin-bottom: 0.75rem;">Calculadoras</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 2;">
+              <li><a href="/calculadora-de-piso" style="color: #94a3b8; text-decoration: none;">Piso e Porcelanato</a></li>
+              <li><a href="/calculadora-de-tijolos" style="color: #94a3b8; text-decoration: none;">Tijolos e Blocos</a></li>
+              <li><a href="/calculadora-de-tinta" style="color: #94a3b8; text-decoration: none;">Tinta e Pintura</a></li>
+              <li><a href="/calculadora-de-concreto" style="color: #94a3b8; text-decoration: none;">Concreto e Lajes</a></li>
+              <li><a href="/calculadora-de-cimento" style="color: #94a3b8; text-decoration: none;">Cimento e Massas</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color: #ffffff; font-weight: 800; margin-bottom: 0.75rem;">Institucional & Legal</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; line-height: 2;">
+              <li><a href="/sobre" style="color: #94a3b8; text-decoration: none;">Sobre a Plataforma</a></li>
+              <li><a href="/como-funciona" style="color: #94a3b8; text-decoration: none;">Como Funciona</a></li>
+              <li><a href="/contato" style="color: #94a3b8; text-decoration: none;">Contato e Suporte</a></li>
+              <li><a href="/termos" style="color: #94a3b8; text-decoration: none;">Termos de Uso</a></li>
+              <li><a href="/privacidade" style="color: #94a3b8; text-decoration: none;">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #1e293b; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: #64748b;">
+          &copy; 2026 ObraCalcula. Todos os direitos reservados.
+        </div>
+      </footer>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

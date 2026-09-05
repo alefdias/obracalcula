@@ -20,7 +20,7 @@ export const AdSenseBlock: React.FC<AdSenseBlockProps> = ({
   category = 'Materiais de Construção',
 }) => {
   const { adsense } = SITE_CONFIG;
-  const isLive = adsense.enabled && adsense.publisherId && !adsense.publisherId.includes('XXXX');
+  const isLive = adsense.enabled && !!adsense.publisherId && !!adsense.slots.inContent;
 
   const resolvedSlotId =
     slotId ||

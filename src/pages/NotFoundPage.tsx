@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, Home, ArrowRight, Search } from 'lucide-react';
 import { CALCULATORS } from '../data/calculatorRegistry';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const NotFoundPage: React.FC = () => {
   return (
@@ -50,9 +49,6 @@ export const NotFoundPage: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Publicidade Discreta */}
-      <AdPlaceholder slot="bottom-banner" category="Construção" />
     </div>
   );
 };

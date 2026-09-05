@@ -10,24 +10,26 @@ export const SITE_CONFIG = {
 
   // Configurações do Google AdSense
   adsense: {
-    // Quando você tiver seu ID de editor, altere aqui: ex: 'ca-pub-1234567890123456'
-    publisherId: 'ca-pub-XXXXXXXXXXXXXXXX',
-    // Mude para true quando sua conta for aprovada para exibir anúncios reais
+    publisherId: 'ca-pub-6262635109806028',
+    // Manter false durante a fase de aprovação para evitar caixas de anúncios vazias.
+    // O Google avaliará o site através do script oficial no <head> e Anúncios Automáticos.
+    // Após a aprovação, mude para true.
     enabled: false,
-    // Slots de anúncios padrão
     slots: {
-      headerBanner: '1234567890',
-      inContent: '2345678901',
-      afterResult: '3456789012',
-      sidebar: '4567890123',
-      footerBanner: '5678901234',
+      headerBanner: '4591509327',   // ObraCalcula - Header Banner
+      inContent: '6312162408',      // ObraCalcula - In Content
+      afterResult: '8802594370',    // ObraCalcula - After Result
+      sidebar: '7489512708',        // ObraCalcula - Sidebar
+      footerBanner: '4050734643',   // ObraCalcula - Footer Banner
+      footerBanner2: '7672968233',   // ObraCalcula - Footer Banner 2
+      footerBanner3: '2237186027',   // ObraCalcula - Footer Banner 3 (reserva)
     },
   },
 
   // Configurações do Google Analytics / Google Ads
   analytics: {
     // ID do Google Analytics 4 (ex: 'G-XXXXXXXXXX')
-    measurementId: '',
+    measurementId: 'G-0XXEV7H9JE',
     // ID de conversão do Google Ads (ex: 'AW-XXXXXXXXX')
     googleAdsId: '',
   },
