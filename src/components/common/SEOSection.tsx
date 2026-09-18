@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Lightbulb, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { BookOpen, Lightbulb, ArrowRight, CheckCircle2, FileText } from 'lucide-react';
 import { CalculatorMeta, getRelatedCalculators } from '../../data/calculatorRegistry';
+import { GUIDES_DATABASE } from '../../data/guidesData';
 import { FAQAccordion } from './FAQAccordion';
 import { AdPlaceholder } from './AdPlaceholder';
 
@@ -11,6 +12,7 @@ interface SEOSectionProps {
 
 export const SEOSection: React.FC<SEOSectionProps> = ({ calculator }) => {
   const related = getRelatedCalculators(calculator.id, 3);
+  const matchingGuide = GUIDES_DATABASE.find(g => g.calculatorSlug === calculator.slug);
 
   return (
     <div className="mt-12 pt-8 border-t border-slate-200 space-y-10">
@@ -46,6 +48,30 @@ export const SEOSection: React.FC<SEOSectionProps> = ({ calculator }) => {
           ))}
         </div>
       </section>
+
+      {/* Guia Técnico Aprofundado Recomendado */}
+      {matchingGuide && (
+        <aside className="bg-gradient-to-r from-brand-900 to-navy-950 text-white p-6 sm:p-7 rounded-2xl shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="space-y-1.5 max-w-xl">
+            <span className="text-[10px] uppercase font-bold tracking-wider text-accent-400 bg-white/10 px-2.5 py-0.5 rounded">
+              Artigo Técnico Completo
+            </span>
+            <h3 className="text-lg font-bold text-white">
+              {matchingGuide.title}
+            </h3>
+            <p className="text-xs text-slate-300 line-clamp-2">
+              {matchingGuide.summary}
+            </p>
+          </div>
+          <Link
+            to={`/guias/${matchingGuide.slug}`}
+            className="px-5 py-2.5 bg-accent-500 hover:bg-accent-400 active:bg-accent-600 text-slate-950 font-bold rounded-xl text-xs sm:text-sm whitespace-nowrap transition-all shadow-xs flex items-center gap-1.5 self-start sm:self-auto flex-shrink-0"
+          >
+            <span>Ler Guia Passo a Passo</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </aside>
+      )}
 
       {/* Pro Tips Section */}
       {calculator.tips && calculator.tips.length > 0 && (

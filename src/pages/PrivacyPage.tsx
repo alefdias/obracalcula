@@ -1,7 +1,6 @@
 import React from 'react';
 import { Shield, Lock, Eye, Cookie, ExternalLink, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const PrivacyPage: React.FC = () => {
   return (
@@ -118,9 +117,6 @@ export const PrivacyPage: React.FC = () => {
           </p>
         </section>
       </div>
-
-      {/* Publicidade Discreta */}
-      <AdPlaceholder slot="bottom-banner" category="Geral" />
     </div>
   );
 };

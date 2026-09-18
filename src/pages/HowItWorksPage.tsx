@@ -8,9 +8,7 @@ import {
   CheckCircle2, 
   ArrowRight,
   ShieldCheck,
-  AlertTriangle
 } from 'lucide-react';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const HowItWorksPage: React.FC = () => {
   React.useEffect(() => {
@@ -109,8 +107,6 @@ export const HowItWorksPage: React.FC = () => {
           </Link>
         </div>
       </div>
-
-      <AdPlaceholder slot="bottom-banner" />
     </div>
   );
 };

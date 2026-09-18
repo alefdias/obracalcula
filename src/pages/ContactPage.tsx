@@ -10,7 +10,6 @@ import {
   Building
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const ContactPage: React.FC = () => {
   const [name, setName] = useState('');
@@ -220,9 +219,6 @@ export const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Publicidade Discreta */}
-      <AdPlaceholder slot="bottom-banner" category="Suporte e Orçamentos" />
     </div>
   );
 };

@@ -88,6 +88,17 @@ export const Header: React.FC = () => {
             </Link>
 
             <Link
+              to="/guias"
+              className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isActive('/guias') || location.pathname.startsWith('/guias')
+                  ? 'bg-white/10 text-white font-semibold'
+                  : 'text-slate-200 hover:text-white hover:bg-white/5'
+              }`}
+            >
+              Guias & Dicas
+            </Link>
+
+            <Link
               to="/sobre"
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive('/sobre') ? 'bg-white/10 text-white font-semibold' : 'text-slate-200 hover:text-white hover:bg-white/5'
@@ -161,6 +172,17 @@ export const Header: React.FC = () => {
               }`}
             >
               Guia de Materiais & Rendimentos
+            </Link>
+            <Link
+              to="/guias"
+              onClick={closeMenu}
+              className={`block px-4 py-2.5 rounded-xl text-base font-medium ${
+                isActive('/guias') || location.pathname.startsWith('/guias')
+                  ? 'bg-white/10 text-white font-bold'
+                  : 'text-slate-200 hover:bg-white/5'
+              }`}
+            >
+              Artigos & Guias Técnicos
             </Link>
             <Link
               to="/como-funciona"

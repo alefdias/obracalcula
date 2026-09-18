@@ -7,6 +7,8 @@ import { HomePage } from './pages/HomePage';
 import { AllCalculatorsPage } from './pages/AllCalculatorsPage';
 import { CalculatorDetailPage } from './pages/CalculatorDetailPage';
 import { MaterialsGuidePage } from './pages/MaterialsGuidePage';
+import { GuidesListPage } from './pages/GuidesListPage';
+import { GuideDetailPage } from './pages/GuideDetailPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
@@ -44,7 +46,11 @@ const AppContent: React.FC = () => {
           <Route path="/calculadora-de-rodape" element={<CalculatorDetailPage forcedSlug="calculadora-de-rodape" />} />
           <Route path="/calculadora-de-massa-corrida" element={<CalculatorDetailPage forcedSlug="calculadora-de-massa-corrida" />} />
 
-          {/* Dynamic Slug Route */}
+          {/* Guias Técnicos e Artigos Educativos */}
+          <Route path="/guias" element={<GuidesListPage />} />
+          <Route path="/guias/:slug" element={<GuideDetailPage />} />
+
+          {/* Dynamic Slug Route for Calculators */}
           <Route path="/:slug" element={<CalculatorDetailPage />} />
 
           {/* Informational & Institutional Pages */}

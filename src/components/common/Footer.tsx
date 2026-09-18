@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
           {/* Construção & Pisos Links */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">
-              Construção & Pisos
+              Calculadoras
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -59,47 +59,52 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/calculadora-de-argamassa" className="hover:text-accent-400 transition-colors">
-                  Calculadora de Argamassa
-                </Link>
-              </li>
-              <li>
-                <Link to="/calculadora-de-rejunte" className="hover:text-accent-400 transition-colors">
-                  Calculadora de Rejunte
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Pintura, Telhado & Reforma */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">
-              Pintura & Cobertura
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
                 <Link to="/calculadora-de-tinta" className="hover:text-accent-400 transition-colors">
                   Calculadora de Tinta
                 </Link>
               </li>
               <li>
-                <Link to="/calculadora-de-telhas" className="hover:text-accent-400 transition-colors">
-                  Calculadora de Telhas
+                <Link to="/calculadoras" className="hover:text-accent-400 transition-colors font-semibold text-accent-400">
+                  Ver Todas (10+) →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Guias & Artigos Técnicos */}
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">
+              Guias & Dicas
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/guias/como-calcular-piso-e-porcelanato" className="hover:text-accent-400 transition-colors">
+                  Cálculo de Piso e Perdas
                 </Link>
               </li>
               <li>
-                <Link to="/calculadora-de-rodape" className="hover:text-accent-400 transition-colors">
-                  Calculadora de Rodapé
+                <Link to="/guias/traco-de-concreto-para-laje-viga-fundacao" className="hover:text-accent-400 transition-colors">
+                  Traço de Concreto em Latas
                 </Link>
               </li>
               <li>
-                <Link to="/calculadora-de-massa-corrida" className="hover:text-accent-400 transition-colors">
-                  Calculadora de Massa Corrida
+                <Link to="/guias/quantidade-de-tijolos-e-blocos-por-metro-quadrado" className="hover:text-accent-400 transition-colors">
+                  Tijolos por Metro Quadrado
                 </Link>
               </li>
               <li>
-                <Link to="/materiais" className="hover:text-accent-400 transition-colors font-semibold text-brand-400">
-                  Tabela de Rendimentos →
+                <Link to="/guias/como-calcular-tinta-para-paredes-e-tetos" className="hover:text-accent-400 transition-colors">
+                  Cálculo de Tinta e Demãos
+                </Link>
+              </li>
+              <li>
+                <Link to="/guias/tipos-de-argamassa-ac1-ac2-ac3" className="hover:text-accent-400 transition-colors">
+                  Argamassas AC1, AC2 e AC3
+                </Link>
+              </li>
+              <li>
+                <Link to="/guias" className="hover:text-accent-400 transition-colors font-semibold text-accent-400">
+                  Todos os Guias →
                 </Link>
               </li>
             </ul>
@@ -112,8 +117,8 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/sobre" className="hover:text-accent-400 transition-colors">
-                  Sobre Nós
+                <Link to="/materiais" className="hover:text-accent-400 transition-colors">
+                  Tabela de Rendimentos
                 </Link>
               </li>
               <li>
@@ -122,13 +127,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contato" className="hover:text-accent-400 transition-colors">
-                  Contato & Suporte
+                <Link to="/sobre" className="hover:text-accent-400 transition-colors">
+                  Sobre a Plataforma
                 </Link>
               </li>
               <li>
-                <Link to="/calculadoras" className="hover:text-accent-400 transition-colors">
-                  Todas as Ferramentas
+                <Link to="/contato" className="hover:text-accent-400 transition-colors">
+                  Contato & Suporte
                 </Link>
               </li>
               <li>

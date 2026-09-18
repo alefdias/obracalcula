@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, AlertTriangle, FileText, Scale, CheckCircle2 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const TermsPage: React.FC = () => {
   return (
@@ -84,9 +83,6 @@ export const TermsPage: React.FC = () => {
           </p>
         </section>
       </div>
-
-      {/* Publicidade Discreta */}
-      <AdPlaceholder slot="bottom-banner" category="Geral" />
     </div>
   );
 };

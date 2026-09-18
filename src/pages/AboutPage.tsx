@@ -12,7 +12,6 @@ import {
   Cpu
 } from 'lucide-react';
 import { SITE_CONFIG } from '../config/siteConfig';
-import { AdPlaceholder } from '../components/common/AdPlaceholder';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -158,9 +157,6 @@ export const AboutPage: React.FC = () => {
           </Link>
         </div>
       </div>
-
-      {/* Publicidade Discreta */}
-      <AdPlaceholder slot="bottom-banner" category="Construção e Reforma" />
     </div>
   );
 };

@@ -19,9 +19,11 @@ import {
   Container,
   LayoutGrid,
   Bot,
-  Zap
+  Zap,
+  BookOpen
 } from 'lucide-react';
 import { CALCULATORS, CATEGORIES, CalculatorMeta } from '../data/calculatorRegistry';
+import { GUIDES_DATABASE } from '../data/guidesData';
 import { getCalculationHistory, HistoryItem } from '../hooks/useCalculatorStorage';
 import { AdPlaceholder } from '../components/common/AdPlaceholder';
 import { parseNaturalLanguageQuery, matchCalculatorsFlexible } from '../utils/nlpParser';
@@ -488,7 +490,64 @@ export const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* AFFILIATE STORES */}
+        {/* SEÇÃO DE ARTIGOS E GUIAS TÉCNICOS */}
+        <section className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2.5 py-1 rounded-md">
+                Aprenda Antes de Comprar
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-1.5">
+                Guias Técnicos e Dicas de Construção
+              </h2>
+            </div>
+            <Link
+              to="/guias"
+              className="text-xs sm:text-sm font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 self-start sm:self-auto"
+            >
+              <span>Ver todos os artigos</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {GUIDES_DATABASE.slice(0, 3).map((guide) => (
+              <article
+                key={guide.slug}
+                className="bg-white p-5 rounded-2xl border border-slate-200 hover:border-brand-400 hover:shadow-card transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-brand-700 bg-brand-50 px-2 py-0.5 rounded">
+                      {guide.category}
+                    </span>
+                    <span className="text-slate-400 flex items-center gap-1">
+                      <Clock className="w-3 h-3" /> {guide.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-brand-600 transition-colors line-clamp-2">
+                    <Link to={`/guias/${guide.slug}`}>
+                      {guide.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    {guide.summary}
+                  </p>
+                </div>
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                  <Link
+                    to={`/guias/${guide.slug}`}
+                    className="text-xs font-bold text-brand-600 group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1"
+                  >
+                    Ler artigo <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* RECOMENDAÇÕES DE COMPRA NO DEPÓSITO */}
         <AdPlaceholder slot="affiliate-products" />
       </div>
     </div>
