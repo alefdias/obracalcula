@@ -1,2 +1,1 @@
-# ads.txt do ObraCalcula
 google.com, pub-6262635109806028, DIRECT, f08c47fec0942fa0
